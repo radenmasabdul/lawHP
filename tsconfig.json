@@ -5,9 +5,19 @@
     { "path": "./tsconfig.node.json" }
   ],
   "compilerOptions": {
-    "baseUrl": ".",
+    "baseUrl": "./",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@/assets/*": ["./src/assets/*"],
+      "@/icons/*": ["./src/assets/icons/*"],
+      "@/images/*": ["./src/assets/images/*"],
+      "@/common/*": ["./src/common/*"],
+      "@/locales/*": ["./src/common/locales/*"],
+      "@/utils/*": ["./src/common/utils/*"],
+      "@/layout/*": ["./src/layouts/*"],
+      "@/components/*": ["./src/layouts/components/*"],
+      "@/pages/*": ["./src/pages/*"],
+      "@/styles/*": ["./src/styles/*"],
     }
   }
 }

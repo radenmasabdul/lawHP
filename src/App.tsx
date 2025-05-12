@@ -1,9 +1,9 @@
-function App() {
+import Home from "./pages/Home/Home";
+
+export default function App() {
   return (
     <>
-      <h1 className="fonts-inter text-secondary-medium">Hello World!</h1>
+      <Home />
     </>
   );
 }
-
-export default App;
