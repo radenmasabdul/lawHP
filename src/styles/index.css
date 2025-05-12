@@ -4,12 +4,6 @@
 
 @custom-variant dark (&:is(.dark *));
 
-@layer base {
-  .fonts-inter {
-    font-family: 'Inter', sans-serif;
-  }
-}
-
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
@@ -90,6 +84,32 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+  /* === Primary Colors === */
+  --color-primary-light: #313131;
+  --color-primary-medium: #181818;
+  --color-primary-deep: #0F0F0F;
+
+  /* === Secondary (Gold) Colors === */
+  --color-secondary-light: #F3DBBA;
+  --color-secondary-medium: #E6B774;
+  --color-secondary-deep: #B8925D;
+
+  /* === Tertiary (Grey) Colors === */
+  --color-tertiary-light: #FAFAFA;
+  --color-tertiary-fine: #E4E4E4;
+  --color-tertiary-medium: #C5C5C5;
+  --color-tertiary-deep: #666666;
+
+  /* === Success (Green) Colors === */
+  --color-success-light: #8BD9B3;
+  --color-success-medium: #18B368;
+  --color-success-deep: #117D49;
+
+  /* === Critical (Red) Colors === */
+  --color-critical-light: #F7A3A3;
+  --color-critical-medium: #EE4747;
+  --color-critical-deep: #A73232;
 }
 
 .dark {
@@ -133,4 +153,53 @@
   body {
     @apply bg-background text-foreground;
   }
+  .fonts-inter {
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  /* Utility class untuk teks */
+  .text-primary-light { color: var(--color-primary-light); }
+  .text-primary-medium { color: var(--color-primary-medium); }
+  .text-primary-deep { color: var(--color-primary-deep); }
+
+  .text-secondary-light { color: var(--color-secondary-light); }
+  .text-secondary-medium { color: var(--color-secondary-medium); }
+  .text-secondary-deep { color: var(--color-secondary-deep); }
+
+  .text-tertiary-light { color: var(--color-tertiary-light); }
+  .text-tertiary-fine { color: var(--color-tertiary-fine); }
+  .text-tertiary-medium { color: var(--color-tertiary-medium); }
+  .text-tertiary-deep { color: var(--color-tertiary-deep); }
+
+  .text-success-light { color: var(--color-success-light); }
+  .text-success-medium { color: var(--color-success-medium); }
+  .text-success-deep { color: var(--color-success-deep); }
+
+  .text-critical-light { color: var(--color-critical-light); }
+  .text-critical-medium { color: var(--color-critical-medium); }
+  .text-critical-deep { color: var(--color-critical-deep); }
+
+  /* Utility class untuk background */
+  .bg-primary-light { background-color: var(--color-primary-light); }
+  .bg-primary-medium { background-color: var(--color-primary-medium); }
+  .bg-primary-deep { background-color: var(--color-primary-deep); }
+
+  .bg-secondary-light { background-color: var(--color-secondary-light); }
+  .bg-secondary-medium { background-color: var(--color-secondary-medium); }
+  .bg-secondary-deep { background-color: var(--color-secondary-deep); }
+
+  .bg-tertiary-light { background-color: var(--color-tertiary-light); }
+  .bg-tertiary-fine { background-color: var(--color-tertiary-fine); }
+  .bg-tertiary-medium { background-color: var(--color-tertiary-medium); }
+  .bg-tertiary-deep { background-color: var(--color-tertiary-deep); }
+
+  .bg-success-light { background-color: var(--color-success-light); }
+  .bg-success-medium { background-color: var(--color-success-medium); }
+  .bg-success-deep { background-color: var(--color-success-deep); }
+
+  .bg-critical-light { background-color: var(--color-critical-light); }
+  .bg-critical-medium { background-color: var(--color-critical-medium); }
+  .bg-critical-deep { background-color: var(--color-critical-deep); }
 }
